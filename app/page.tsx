@@ -152,7 +152,7 @@ export default function Page() {
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="grid gap-12 lg:grid-cols-2 lg:items-start">
               <div>
-                <h2 className="text-sm font-bold uppercase tracking-widest text-emerald-400 mb-4">About hojoudata</h2>
+                <h2 className="text-sm font-bold uppercase tracking-widest text-emerald-400 mb-4">About <span className="normal-case">hojoudata</span></h2>
                 <p className="text-3xl font-bold tracking-tight text-white sm:text-4xl mb-8 leading-snug">
                   地域で農業を続けるための、<br />共有基盤へ。
                 </p>
