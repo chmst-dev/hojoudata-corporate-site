@@ -250,8 +250,8 @@ export default function Page() {
                     </div>
                   </div>
 
-                  {/* 右：画像2枚 */}
-                  <div className="flex flex-col sm:flex-row lg:flex-col gap-5">
+                  {/* 右：画像2枚（縦長全体表示） */}
+                  <div className="flex flex-row gap-4">
                     <figure className="flex-1 flex flex-col gap-2">
                       <div className="relative rounded-2xl overflow-hidden border border-white/5 bg-zinc-950 shadow-xl">
                         <div className="absolute inset-x-0 top-0 h-6 bg-zinc-900/80 flex items-center justify-center">
@@ -262,8 +262,7 @@ export default function Page() {
                           alt="圃場ごとの作物・面積・注意点・登録地点を地図上で確認できる閲覧画面"
                           width={390}
                           height={720}
-                          className="w-full h-auto object-cover pt-6"
-                          style={{ maxHeight: '320px', objectFit: 'cover', objectPosition: 'top' }}
+                          className="w-full h-auto pt-6"
                         />
                       </div>
                       <figcaption className="text-xs text-zinc-500 text-center px-1">
@@ -281,8 +280,7 @@ export default function Page() {
                           alt="圃場の形状や名称・作物・注意事項を登録・編集できる画面"
                           width={390}
                           height={720}
-                          className="w-full h-auto object-cover pt-6"
-                          style={{ maxHeight: '320px', objectFit: 'cover', objectPosition: 'top' }}
+                          className="w-full h-auto pt-6"
                         />
                       </div>
                       <figcaption className="text-xs text-zinc-500 text-center px-1">
