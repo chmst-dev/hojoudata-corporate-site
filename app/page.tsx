@@ -13,10 +13,16 @@ import {
   ExternalLink,
   Handshake,
   ClipboardList,
+  TrendingUp,
+  Search,
+  Hammer,
+  FlaskConical,
+  BarChart3,
+  TreePine,
 } from 'lucide-react';
 
 export default function Page() {
-  // 提供価値4つ
+  // 提供価値5つ
   const values = [
     {
       icon: <MapPin className="w-6 h-6 text-emerald-400" />,
@@ -31,12 +37,46 @@ export default function Page() {
     {
       icon: <Handshake className="w-6 h-6 text-emerald-400" />,
       title: '作業がつながる',
-      body: '草刈り、水管理、収穫、水路清掃など、地域の中で必要な作業を共有し、助け合いや分担につなげます。',
+      body: '草刈り、水管理、収穫、袋かけ、水路清掃など、地域の中で必要な作業を共有し、助け合いや分担につなげます。',
+    },
+    {
+      icon: <TrendingUp className="w-6 h-6 text-emerald-400" />,
+      title: '経営が見える',
+      body: '作付け、労働、機械、外注、販路、地域連携を組み合わせ、現実に回る農業経営モデルを検証します。',
     },
     {
       icon: <ClipboardList className="w-6 h-6 text-emerald-400" />,
       title: '次に引き継げる',
       body: '圃場や作業の情報を、次の担い手や支援者に引き継げる形にし、地域農業の継続性を高めます。',
+    },
+  ];
+
+  // What we do（5ステップ）
+  const steps = [
+    {
+      label: '見つける',
+      icon: <Search className="w-5 h-5 text-emerald-400" />,
+      text: '農家・地域・行政の現場から、まだ言語化されていない課題を拾い上げます。',
+    },
+    {
+      label: 'つくる',
+      icon: <Hammer className="w-5 h-5 text-emerald-400" />,
+      text: '地図アプリ、記録ツール、作業共有、助け合いの仕組みなど、まず試せる形に落とします。',
+    },
+    {
+      label: '試す',
+      icon: <FlaskConical className="w-5 h-5 text-emerald-400" />,
+      text: '実際の圃場や地域ネットワークで使いながら、使われるか・続くかを検証します。',
+    },
+    {
+      label: '経営として検証する',
+      icon: <BarChart3 className="w-5 h-5 text-emerald-400" />,
+      text: '作付け、労働、機械、外注、販路、地域連携を含め、農業経営として成り立つかを検証します。',
+    },
+    {
+      label: '育てる',
+      icon: <TreePine className="w-5 h-5 text-emerald-400" />,
+      text: '実証結果をもとに、地域運用、行政連携、事業化、予防保全、経営モデル化へ接続します。',
     },
   ];
 
@@ -73,6 +113,7 @@ export default function Page() {
           </div>
           <nav className="hidden gap-8 text-sm font-medium text-zinc-400 md:flex">
             <a href="#about" className="transition-colors hover:text-white">About</a>
+            <a href="#what-we-do" className="transition-colors hover:text-white">What We Do</a>
             <a href="#products" className="transition-colors hover:text-white">Products</a>
             <a href="#contact" className="transition-colors hover:text-white">Contact</a>
           </nav>
@@ -89,20 +130,21 @@ export default function Page() {
             <div className="max-w-3xl">
               <div className="inline-flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-3 py-1 text-xs font-medium text-emerald-300 mb-8">
                 <span className="flex h-2 w-2 rounded-full bg-emerald-500"></span>
-                地域農業の持続可能性を支える情報共有基盤
+                農業現場の実証フィールド
               </div>
               <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl lg:text-7xl mb-6 leading-[1.1]">
-                地域農業を、<br className="hidden sm:block" />
+                農業現場の<br className="hidden sm:block" />
+                困りごとを、<br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-500">
-                  続けられる形に。
+                  試せるかたちに。
                 </span>
               </h1>
-              <p className="text-lg leading-relaxed text-zinc-400 max-w-2xl mb-4">
-                圃場、水路、畦畔、農道、作業、人のつながり。
-                地域農業を支える情報を見える化し、次の担い手へ引き継げる形にしていきます。
+              <p className="text-lg leading-relaxed text-zinc-300 max-w-2xl mb-4">
+                圃場、水路、作業、人手、経営。<br />
+                地域農業を続けるために必要な仕組みを、現場の声と実証から小さくつくり、試し、育てていきます。
               </p>
               <p className="text-sm leading-relaxed text-zinc-500 max-w-2xl mb-10">
-                hojoudataは、農業現場で失われがちな「場所・状態・作業・関係性」の情報を記録・共有し、持続可能な地域農業を支えるための実証開発に取り組んでいます。
+                hojoudataは、農業現場にある課題を、アプリ・データ・運用設計・経営モデルに落とし込み、地域農業の持続可能性を高めるための実証開発に取り組んでいます。
               </p>
               <div className="flex flex-wrap items-center gap-4">
                 <a
@@ -124,22 +166,22 @@ export default function Page() {
           </div>
         </section>
 
-        {/* ===== 提供価値4つ ===== */}
+        {/* ===== 提供価値5つ ===== */}
         <section className="py-24 border-t border-white/5 bg-zinc-950">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mb-12">
-              <h2 className="text-sm font-bold uppercase tracking-widest text-emerald-400 mb-3">What We Do</h2>
+              <h2 className="text-sm font-bold uppercase tracking-widest text-emerald-400 mb-3">Values</h2>
               <p className="text-3xl font-bold tracking-tight text-white sm:text-4xl max-w-xl">
                 農業を続けるために、必要なこと。
               </p>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
               {values.map((item, idx) => (
                 <div key={idx} className="group rounded-3xl border border-white/5 bg-zinc-900/30 p-7 hover:bg-zinc-900/60 transition-colors">
                   <div className="mb-5 inline-flex items-center justify-center w-12 h-12 rounded-full bg-zinc-800/50 border border-white/5">
                     {item.icon}
                   </div>
-                  <h3 className="text-lg font-bold text-white mb-3">{item.title}</h3>
+                  <h3 className="text-base font-bold text-white mb-3">{item.title}</h3>
                   <p className="text-sm text-zinc-400 leading-relaxed">{item.body}</p>
                 </div>
               ))}
@@ -147,35 +189,36 @@ export default function Page() {
           </div>
         </section>
 
-        {/* ===== Vision / About ===== */}
+        {/* ===== About ===== */}
         <section id="about" className="py-24 lg:py-32">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="grid gap-12 lg:grid-cols-2 lg:items-start">
               <div>
                 <h2 className="text-sm font-bold uppercase tracking-widest text-emerald-400 mb-4">About <span className="normal-case">hojoudata</span></h2>
                 <p className="text-3xl font-bold tracking-tight text-white sm:text-4xl mb-8 leading-snug">
-                  地域で農業を続けるための、<br />共有基盤へ。
+                  農業の現場で、<br />仮説検証を回す。
                 </p>
                 <div className="space-y-5 text-zinc-400 leading-relaxed text-sm">
                   <p>
-                    農地の集積が進む一方で、水管理、草刈り、用排水路の維持、圃場情報の引き継ぎ、作業の助け合いは、個人の記憶や地域の暗黙知に支えられてきました。
+                    農業現場には、まだ言語化されていない困りごとが多くあります。
+                    圃場の場所が共有されない。水路や水口の状態が引き継がれない。草刈りや収穫の人手が足りない。地域の助け合いが、個人の関係性に依存している。作付けや機械投資、労働配分が経営として本当に成り立つのか見えにくい。
                   </p>
                   <p>
-                    しかし、担い手の減少と高齢化が進む中で、その仕組みは限界を迎えつつあります。
+                    hojoudataは、こうした課題を現場で観察し、小さなアプリや運用モデルとして試しながら、地域農業を続けるための仕組みに育てていきます。
                   </p>
                   <p>
-                    hojoudataは、圃場・地点・作業・助け合いの情報を記録し、地域で共有できる形にすることで、農業を続けるための基盤づくりを進めます。
+                    農地の集積が進む一方で、担い手の減少と高齢化が続く中で、個人の記憶や地域の暗黙知に支えられてきた仕組みは、限界を迎えつつあります。
                   </p>
                   <p>
-                    将来的には、こうした情報を農業インフラの予防保全、土地改良区や自治体との連携、地域インフラの維持管理にもつなげていきます。
+                    圃場・地点・作業・助け合い・インフラ・経営条件の情報を記録し、地域で共有・検証できる形にすることで、農業を続けるための基盤づくりを進めます。
                   </p>
                 </div>
               </div>
               <div className="grid gap-4">
                 {[
-                  { label: '担い手', text: '農地の集積が進む一方、農業を担う人は年々減少しています。' },
-                  { label: '情報の断絶', text: '圃場の場所、水管理の方法、注意事項は、引き継がれにくい形で残ってきました。' },
-                  { label: 'hojoudataの応え', text: '現場で使えるアプリで、場所・状態・作業・助け合いを記録し、地域で共有します。' },
+                  { label: '担い手の課題', text: '農地の集積が進む一方、農業を担う人は年々減少しています。個人の経験と暗黙知だけでは、維持が難しくなっています。' },
+                  { label: '情報の断絶', text: '圃場の場所、水管理の方法、草刈りの段取り、注意事項は、引き継がれにくい形で残ってきました。' },
+                  { label: 'hojoudataの応え', text: '現場の困りごとを観察し、試せる形のアプリ・運用・経営モデルとしてつくり、地域で使いながら育てていきます。' },
                 ].map((item, idx) => (
                   <div key={idx} className="rounded-2xl border border-white/5 bg-zinc-900/40 p-6">
                     <div className="text-xs font-bold text-emerald-400 mb-2 uppercase tracking-widest">{item.label}</div>
@@ -187,22 +230,59 @@ export default function Page() {
           </div>
         </section>
 
+        {/* ===== What We Do（5ステップ） ===== */}
+        <section id="what-we-do" className="py-24 lg:py-32 border-t border-white/5 bg-zinc-950">
+          <div className="mx-auto max-w-7xl px-6 lg:px-8">
+            <div className="mb-16">
+              <h2 className="text-sm font-bold uppercase tracking-widest text-emerald-400 mb-3">What We Do</h2>
+              <p className="text-3xl font-bold tracking-tight text-white sm:text-4xl mb-4">
+                現場課題を、使える仕組みに変える。
+              </p>
+              <p className="text-sm text-zinc-400 max-w-2xl leading-relaxed">
+                「見つける」から「育てる」まで。農業現場にある課題を、実際に動く仕組みへと変えていくプロセスで進めています。
+              </p>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+              {steps.map((step, idx) => (
+                <div key={idx} className="relative rounded-3xl border border-white/5 bg-zinc-900/30 p-7 hover:bg-zinc-900/60 transition-colors">
+                  <div className="flex items-center gap-3 mb-5">
+                    <div className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-zinc-800/50 border border-white/5">
+                      {step.icon}
+                    </div>
+                    <span className="text-xs font-bold text-emerald-500 uppercase tracking-widest">0{idx + 1}</span>
+                  </div>
+                  <h3 className="text-base font-bold text-white mb-3">{step.label}</h3>
+                  <p className="text-sm text-zinc-400 leading-relaxed">{step.text}</p>
+                  {idx < steps.length - 1 && (
+                    <div className="hidden lg:block absolute top-1/2 -right-3 -translate-y-1/2 text-zinc-700 z-10">
+                      <ChevronRight className="w-5 h-5" />
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+            <p className="mt-8 text-xs text-zinc-600 text-center">
+              この流れは、くわだてカンパニーが進める「現場の企てを、試せるかたちにする」考え方と自然につながっています。
+            </p>
+          </div>
+        </section>
+
         {/* ===== 実証アプリ紹介 ===== */}
-        <section id="products" className="py-24 lg:py-32 border-t border-white/5 bg-zinc-950">
+        <section id="products" className="py-24 lg:py-32 border-t border-white/5">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             {/* ヘッダー */}
             <div className="mb-16">
               <h2 className="text-sm font-bold uppercase tracking-widest text-emerald-400 mb-3">Field Apps</h2>
               <p className="text-3xl font-bold tracking-tight text-white sm:text-4xl mb-6">
-                地域農業を支える、2つの実証アプリ
+                現場の仮説から生まれた実証アプリ
               </p>
               <div className="max-w-2xl space-y-3 text-sm text-zinc-400 leading-relaxed">
                 <p>
-                  hojoudataでは、地域農業を続けるうえで現場が直面している「場所の共有」と「人手の共有」に着目し、2つの実証アプリを開発しています。
+                  hojoudataでは、地域農業を続けるうえで現場が直面している課題を、小さなアプリとして形にし、実際の現場で検証しています。
                 </p>
                 <p>
-                  圃場や注意地点を共有する「みんなの圃場マップ」と、農家同士の助け合いを支える「あぐり結び」。
-                  どちらも、地域の中にある情報や関係性を見える化し、農業を続けやすくするための取り組みです。
+                  圃場や注意地点を共有する「みんなの圃場マップ」。農家同士の助け合いを支える「あぐり結び」。
+                  どちらも、現場の困りごとを起点に、地域で使える仕組みとして育てている実証プロダクトです。
                 </p>
               </div>
             </div>
@@ -247,7 +327,7 @@ export default function Page() {
                     </div>
                   </div>
 
-                  {/* 右：画像2枚（縦長全体表示） */}
+                  {/* 右：画像2枚 */}
                   <div className="flex flex-row gap-4">
                     <figure className="flex-1 flex flex-col gap-2">
                       <div className="relative rounded-2xl overflow-hidden border border-white/5 bg-zinc-950 shadow-xl">
@@ -395,8 +475,47 @@ export default function Page() {
                 <p className="text-lg font-bold text-white leading-relaxed">
                   圃場を共有する。<br />
                   作業を助け合う。<br />
+                  経営として試す。<br />
                   <span className="text-emerald-400">現場の情報を、地域の資産に変えていく。</span>
                 </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ===== 農業経営モデル開発 ===== */}
+        <section className="py-24 lg:py-32 border-t border-white/5 bg-zinc-950">
+          <div className="mx-auto max-w-7xl px-6 lg:px-8">
+            <div className="grid gap-12 lg:grid-cols-2 lg:items-start">
+              <div>
+                <h2 className="text-sm font-bold uppercase tracking-widest text-emerald-400 mb-4">Farm Management</h2>
+                <p className="text-3xl font-bold tracking-tight text-white sm:text-4xl mb-8 leading-snug">
+                  続けられる農業経営モデルを探る。
+                </p>
+                <div className="space-y-5 text-sm text-zinc-400 leading-relaxed">
+                  <p>
+                    農業の持続可能性は、アプリやデータだけでは実現できません。
+                    作付け、労働、機械、外注、販路、地域内の助け合い、インフラ維持。これらを組み合わせて、現実に回る経営モデルをつくる必要があります。
+                  </p>
+                  <p>
+                    hojoudataでは、自らも農業現場に関わりながら、ユニットエコノミクスを重視した小さな実証を行い、地域の実情に合った農業経営モデルの開発に取り組んでいます。
+                  </p>
+                  <p>
+                    単に規模を拡大するのではなく、無理なく続けられる面積、作業分担、設備投資、地域連携のあり方を検証していきます。
+                  </p>
+                </div>
+              </div>
+              <div className="grid gap-4">
+                {[
+                  { label: '無理なく続く面積と作業分担', text: '一人や少人数で管理できる圃場面積と、地域での分担モデルを検証します。' },
+                  { label: '機械・外注・助け合いの組み合わせ', text: '設備投資だけに頼らず、地域内の人手や外注を組み合わせた農業経営を試します。' },
+                  { label: '地域連携と採算性の検証', text: '土地改良区、自治体、農業法人との連携も含め、現実に成り立つ経営モデルを探ります。' },
+                ].map((item, idx) => (
+                  <div key={idx} className="rounded-2xl border border-white/5 bg-zinc-900/40 p-6">
+                    <div className="text-xs font-bold text-emerald-400 mb-2 uppercase tracking-widest">{item.label}</div>
+                    <p className="text-sm text-zinc-300 leading-relaxed">{item.text}</p>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
@@ -478,6 +597,37 @@ export default function Page() {
             </div>
           </div>
         </section>
+
+        {/* ===== くわだてカンパニーとの関係 ===== */}
+        <section className="py-20 px-6 lg:px-8 border-t border-white/5">
+          <div className="mx-auto max-w-7xl">
+            <div className="rounded-2xl border border-white/5 bg-zinc-900/30 p-8 lg:p-12">
+              <div className="grid gap-8 lg:grid-cols-3 lg:items-center">
+                <div className="lg:col-span-2">
+                  <h2 className="text-xs font-bold uppercase tracking-widest text-zinc-500 mb-3">Related Initiative</h2>
+                  <p className="text-xl font-bold text-white mb-4">関連する取り組み</p>
+                  <p className="text-sm text-zinc-400 leading-relaxed mb-2">
+                    hojoudataは、くわだてカンパニーが進める「現場の企てを、試せるかたちにする」活動のうち、農業・地域インフラ・農業経営領域における実装フィールドとして展開しています。
+                  </p>
+                  <p className="text-sm text-zinc-400 leading-relaxed">
+                    地域、農業、教育、行政、事業開発など、領域をまたいで仮説検証とプロトタイピングを支援する取り組みについては、くわだてカンパニーをご覧ください。
+                  </p>
+                </div>
+                <div className="flex lg:justify-end">
+                  <a
+                    href="https://www.kuwadate.company/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 rounded-full border border-zinc-700 bg-zinc-800/60 px-6 py-3 text-sm font-medium text-zinc-300 transition-all hover:bg-zinc-700 hover:text-white hover:border-zinc-600"
+                  >
+                    くわだてカンパニーを見る
+                    <ExternalLink className="w-4 h-4" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
 
       {/* ===== フッター ===== */}
@@ -487,7 +637,7 @@ export default function Page() {
             <div>
               <div className="text-2xl font-bold text-white mb-6">hojoudata合同会社</div>
               <p className="text-sm leading-relaxed text-zinc-400 max-w-sm mb-8">
-                地域農業を続けるための情報共有基盤づくりに取り組んでいます。
+                農業現場の困りごとを、試せるかたちに変える実証フィールドです。
               </p>
               <div className="space-y-3 text-sm text-zinc-500">
                 <p>代表者：越智聖人</p>

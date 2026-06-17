@@ -4,7 +4,7 @@ import Script from 'next/script';
 
 export const metadata: Metadata = {
   title: 'hojoudata合同会社',
-  description: '農業インフラの状態変化を地点単位で蓄積し、予防保全を支える現場エビデンス基盤',
+  description: '農業現場の困りごとを、試せるかたちに。圃場・水路・作業・人手・経営を見える化し、持続可能な地域農業の仕組みを現場で育てていきます。',
 };
 
 export default function RootLayout({
