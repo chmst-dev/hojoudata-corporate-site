@@ -109,9 +109,9 @@ export default function Page() {
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
           <div className="flex flex-col">
             <span className="text-lg font-bold tracking-tight text-white">hojoudata</span>
-            <span className="text-[10px] font-medium tracking-wider text-zinc-500 uppercase">Regional Agriculture</span>
+            <span className="text-xs font-medium tracking-wider text-zinc-500 uppercase">Regional Agriculture</span>
           </div>
-          <nav className="hidden gap-8 text-sm font-medium text-zinc-400 md:flex">
+          <nav className="hidden gap-8 text-base font-medium text-zinc-400 md:flex">
             <a href="#about" className="transition-colors hover:text-white">About</a>
             <a href="#what-we-do" className="transition-colors hover:text-white">What We Do</a>
             <a href="#products" className="transition-colors hover:text-white">Products</a>
@@ -143,7 +143,7 @@ export default function Page() {
                 圃場、水路、作業、人手、経営。<br />
                 地域農業を続けるために必要な仕組みを、現場の声と実証から小さくつくり、試し、育てていきます。
               </p>
-              <p className="text-sm leading-relaxed text-zinc-500 max-w-2xl mb-10">
+              <p className="text-base leading-relaxed text-zinc-500 max-w-2xl mb-10">
                 hojoudataは、農業現場にある課題を、アプリ・データ・運用設計・経営モデルに落とし込み、地域農業の持続可能性を高めるための実証開発に取り組んでいます。
               </p>
               <div className="flex flex-wrap items-center gap-4">
@@ -181,8 +181,8 @@ export default function Page() {
                   <div className="mb-5 inline-flex items-center justify-center w-12 h-12 rounded-full bg-zinc-800/50 border border-white/5">
                     {item.icon}
                   </div>
-                  <h3 className="text-base font-bold text-white mb-3">{item.title}</h3>
-                  <p className="text-sm text-zinc-400 leading-relaxed">{item.body}</p>
+                  <h3 className="text-lg font-bold text-white mb-3">{item.title}</h3>
+                  <p className="text-base text-zinc-400 leading-relaxed">{item.body}</p>
                 </div>
               ))}
             </div>
@@ -198,7 +198,7 @@ export default function Page() {
                 <p className="text-3xl font-bold tracking-tight text-white sm:text-4xl mb-8 leading-snug">
                   農業の現場で、<br />仮説検証を回す。
                 </p>
-                <div className="space-y-5 text-zinc-400 leading-relaxed text-sm">
+                <div className="space-y-5 text-zinc-400 leading-relaxed text-base">
                   <p>
                     農業現場には、まだ言語化されていない困りごとが多くあります。
                     圃場の場所が共有されない。水路や水口の状態が引き継がれない。草刈りや収穫の人手が足りない。地域の助け合いが、個人の関係性に依存している。作付けや機械投資、労働配分が経営として本当に成り立つのか見えにくい。
@@ -221,8 +221,8 @@ export default function Page() {
                   { label: 'hojoudataの応え', text: '現場の困りごとを観察し、試せる形のアプリ・運用・経営モデルとしてつくり、地域で使いながら育てていきます。' },
                 ].map((item, idx) => (
                   <div key={idx} className="rounded-2xl border border-white/5 bg-zinc-900/40 p-6">
-                    <div className="text-xs font-bold text-emerald-400 mb-2 uppercase tracking-widest">{item.label}</div>
-                    <p className="text-sm text-zinc-300 leading-relaxed">{item.text}</p>
+                    <div className="text-sm font-bold text-emerald-400 mb-2 uppercase tracking-widest">{item.label}</div>
+                    <p className="text-base text-zinc-300 leading-relaxed">{item.text}</p>
                   </div>
                 ))}
               </div>
@@ -238,7 +238,7 @@ export default function Page() {
               <p className="text-3xl font-bold tracking-tight text-white sm:text-4xl mb-4">
                 現場課題を、使える仕組みに変える。
               </p>
-              <p className="text-sm text-zinc-400 max-w-2xl leading-relaxed">
+              <p className="text-base text-zinc-400 max-w-2xl leading-relaxed">
                 「見つける」から「育てる」まで。農業現場にある課題を、実際に動く仕組みへと変えていくプロセスで進めています。
               </p>
             </div>
@@ -251,8 +251,8 @@ export default function Page() {
                     </div>
                     <span className="text-xs font-bold text-emerald-500 uppercase tracking-widest">0{idx + 1}</span>
                   </div>
-                  <h3 className="text-base font-bold text-white mb-3">{step.label}</h3>
-                  <p className="text-sm text-zinc-400 leading-relaxed">{step.text}</p>
+                  <h3 className="text-lg font-bold text-white mb-3">{step.label}</h3>
+                  <p className="text-base text-zinc-400 leading-relaxed">{step.text}</p>
                   {idx < steps.length - 1 && (
                     <div className="hidden lg:block absolute top-1/2 -right-3 -translate-y-1/2 text-zinc-700 z-10">
                       <ChevronRight className="w-5 h-5" />
@@ -261,7 +261,7 @@ export default function Page() {
                 </div>
               ))}
             </div>
-            <p className="mt-8 text-xs text-zinc-600 text-center">
+            <p className="mt-8 text-sm text-zinc-600 text-center">
               この流れは、くわだてカンパニーが進める「現場の企てを、試せるかたちにする」考え方と自然につながっています。
             </p>
           </div>
@@ -276,7 +276,7 @@ export default function Page() {
               <p className="text-3xl font-bold tracking-tight text-white sm:text-4xl mb-6">
                 現場の仮説から生まれた実証アプリ
               </p>
-              <div className="max-w-2xl space-y-3 text-sm text-zinc-400 leading-relaxed">
+              <div className="max-w-2xl space-y-3 text-base text-zinc-400 leading-relaxed">
                 <p>
                   hojoudataでは、地域農業を続けるうえで現場が直面している課題を、小さなアプリとして形にし、実際の現場で検証しています。
                 </p>
@@ -304,13 +304,13 @@ export default function Page() {
                     <p className="text-emerald-300 font-medium text-base">
                       圃場情報を、地域で共有できる地図アプリ。
                     </p>
-                    <p className="text-zinc-400 leading-relaxed text-sm">
+                    <p className="text-zinc-400 leading-relaxed text-base">
                       圃場の位置、面積、作物、注意事項、入口・落とし・水口などの登録地点を、地図上で分かりやすく共有できます。
                     </p>
-                    <p className="text-zinc-400 leading-relaxed text-sm">
+                    <p className="text-zinc-400 leading-relaxed text-base">
                       農地が分散している地域や、複数人で作業を分担する現場では、「どの圃場か分からない」「どこに注意すべきか伝わっていない」といった小さな情報不足が、作業効率や事故リスクに直結します。
                     </p>
-                    <p className="text-zinc-400 leading-relaxed text-sm">
+                    <p className="text-zinc-400 leading-relaxed text-base">
                       みんなの圃場マップは、圃場に関する情報を一元化し、農家・作業者・支援者が同じ情報を見ながら動ける状態をつくります。
                     </p>
                     {/* ステータスラベル（リンクなし） */}
@@ -342,7 +342,7 @@ export default function Page() {
                           className="w-full h-auto pt-6"
                         />
                       </div>
-                      <figcaption className="text-xs text-zinc-500 text-center px-1">
+                      <figcaption className="text-sm text-zinc-500 text-center px-1">
                         圃場ごとの作物・面積・注意点・登録地点を、地図上で確認できます。
                       </figcaption>
                     </figure>
@@ -360,7 +360,7 @@ export default function Page() {
                           className="w-full h-auto pt-6"
                         />
                       </div>
-                      <figcaption className="text-xs text-zinc-500 text-center px-1">
+                      <figcaption className="text-sm text-zinc-500 text-center px-1">
                         圃場の形状や名称、作物、注意事項を登録し、地域内で共有できます。
                       </figcaption>
                     </figure>
@@ -386,7 +386,7 @@ export default function Page() {
                           className="w-full h-auto pt-6"
                         />
                       </div>
-                      <figcaption className="text-xs text-zinc-500 text-center px-1">
+                      <figcaption className="text-sm text-zinc-500 text-center px-1">
                         地域内の信頼できる農家同士で、忙しい時期の手伝いを頼み合えます。
                       </figcaption>
                     </figure>
@@ -404,7 +404,7 @@ export default function Page() {
                           className="w-full h-auto pt-6"
                         />
                       </div>
-                      <figcaption className="text-xs text-zinc-500 text-center px-1">
+                      <figcaption className="text-sm text-zinc-500 text-center px-1">
                         作業内容・日時・募集人数を共有し、必要なときだけ手伝いを募れます。
                       </figcaption>
                     </figure>
@@ -422,7 +422,7 @@ export default function Page() {
                           className="w-full h-auto pt-6"
                         />
                       </div>
-                      <figcaption className="text-xs text-zinc-500 text-center px-1">
+                      <figcaption className="text-sm text-zinc-500 text-center px-1">
                         助け合いの履歴を残すことで、地域内の信頼と貢献が見えるようになります。
                       </figcaption>
                     </figure>
@@ -441,16 +441,16 @@ export default function Page() {
                     <p className="text-emerald-300 font-medium text-base">
                       地域農家の助け合いを、見える形にするアプリ。
                     </p>
-                    <p className="text-zinc-400 leading-relaxed text-sm">
+                    <p className="text-zinc-400 leading-relaxed text-base">
                       農業には、収穫、草刈り、水路清掃、袋かけ、片付けなど、短期間だけ人手が必要になる作業が多くあります。
                     </p>
-                    <p className="text-zinc-400 leading-relaxed text-sm">
+                    <p className="text-zinc-400 leading-relaxed text-base">
                       一方で、地域の中には、別の時期であれば手伝える農家や、少しだけ作業に参加できる人もいます。
                     </p>
-                    <p className="text-zinc-400 leading-relaxed text-sm">
+                    <p className="text-zinc-400 leading-relaxed text-base">
                       あぐり結びは、地域内の信頼できる相手同士で「手伝ってほしい」と「手伝える」をつなぐ実証アプリです。
                     </p>
-                    <p className="text-zinc-400 leading-relaxed text-sm">
+                    <p className="text-zinc-400 leading-relaxed text-base">
                       作業依頼、参加、助け合い履歴を記録することで、単発の求人ではなく、地域内で支え合う関係を育てることを目指しています。
                     </p>
                     <div className="pt-2">
@@ -492,7 +492,7 @@ export default function Page() {
                 <p className="text-3xl font-bold tracking-tight text-white sm:text-4xl mb-8 leading-snug">
                   続けられる農業経営モデルを探る。
                 </p>
-                <div className="space-y-5 text-sm text-zinc-400 leading-relaxed">
+                <div className="space-y-5 text-base text-zinc-400 leading-relaxed">
                   <p>
                     農業の持続可能性は、アプリやデータだけでは実現できません。
                     作付け、労働、機械、外注、販路、地域内の助け合い、インフラ維持。これらを組み合わせて、現実に回る経営モデルをつくる必要があります。
@@ -512,8 +512,8 @@ export default function Page() {
                   { label: '地域連携と採算性の検証', text: '土地改良区、自治体、農業法人との連携も含め、現実に成り立つ経営モデルを探ります。' },
                 ].map((item, idx) => (
                   <div key={idx} className="rounded-2xl border border-white/5 bg-zinc-900/40 p-6">
-                    <div className="text-xs font-bold text-emerald-400 mb-2 uppercase tracking-widest">{item.label}</div>
-                    <p className="text-sm text-zinc-300 leading-relaxed">{item.text}</p>
+                    <div className="text-sm font-bold text-emerald-400 mb-2 uppercase tracking-widest">{item.label}</div>
+                    <p className="text-base text-zinc-300 leading-relaxed">{item.text}</p>
                   </div>
                 ))}
               </div>
@@ -530,7 +530,7 @@ export default function Page() {
                 <p className="text-3xl font-bold tracking-tight text-white sm:text-4xl mb-8 leading-snug">
                   その先にある、<br />農業インフラの予防保全
                 </p>
-                <div className="space-y-5 text-sm text-zinc-400 leading-relaxed">
+                <div className="space-y-5 text-base text-zinc-400 leading-relaxed">
                   <p>
                     圃場、水路、水口、畦畔、農道などの情報が地域で記録・共有されるようになると、日々の作業効率化だけでなく、インフラの状態変化を把握する基礎にもなります。
                   </p>
@@ -550,9 +550,9 @@ export default function Page() {
                       {item.icon}
                     </div>
                     <div className="flex flex-col">
-                      <span className="text-sm font-bold text-emerald-400 mb-1">{item.phase}</span>
-                      <h3 className="text-lg font-bold text-white mb-2">{item.title}</h3>
-                      <p className="text-zinc-400 leading-relaxed text-sm max-w-lg">{item.text}</p>
+                      <span className="text-base font-bold text-emerald-400 mb-1">{item.phase}</span>
+                      <h3 className="text-xl font-bold text-white mb-2">{item.title}</h3>
+                      <p className="text-zinc-400 leading-relaxed text-base max-w-lg">{item.text}</p>
                     </div>
                   </div>
                 ))}
@@ -570,7 +570,7 @@ export default function Page() {
                 <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl mb-6">
                   実証・連携パートナーを<br />募集しています
                 </h2>
-                <p className="text-zinc-400 leading-relaxed mb-8">
+                <p className="text-base text-zinc-400 leading-relaxed mb-8">
                   協力農家、土地改良区、自治体、研究者、地域インフラの維持管理に関わる事業者との連携を通じて、現場で使える情報共有・維持管理の仕組みを一緒につくっていきます。
                 </p>
                 <a
@@ -590,7 +590,7 @@ export default function Page() {
                     <div className="flex-shrink-0 w-8 h-8 rounded-full bg-emerald-500/10 flex items-center justify-center text-emerald-400 font-bold text-sm">
                       {i + 1}
                     </div>
-                    <span className="text-sm font-medium text-zinc-300">{text}</span>
+                    <span className="text-base font-medium text-zinc-300">{text}</span>
                   </div>
                 ))}
               </div>
@@ -606,10 +606,10 @@ export default function Page() {
                 <div className="lg:col-span-2">
                   <h2 className="text-xs font-bold uppercase tracking-widest text-zinc-500 mb-3">Related Initiative</h2>
                   <p className="text-xl font-bold text-white mb-4">関連する取り組み</p>
-                  <p className="text-sm text-zinc-400 leading-relaxed mb-2">
+                  <p className="text-base text-zinc-400 leading-relaxed mb-2">
                     hojoudataは、くわだてカンパニーが進める「現場の企てを、試せるかたちにする」活動のうち、農業・地域インフラ・農業経営領域における実装フィールドとして展開しています。
                   </p>
-                  <p className="text-sm text-zinc-400 leading-relaxed">
+                  <p className="text-base text-zinc-400 leading-relaxed">
                     地域、農業、教育、行政、事業開発など、領域をまたいで仮説検証とプロトタイピングを支援する取り組みについては、くわだてカンパニーをご覧ください。
                   </p>
                 </div>
@@ -636,10 +636,10 @@ export default function Page() {
           <div className="grid gap-12 lg:grid-cols-2 mb-16">
             <div>
               <div className="text-2xl font-bold text-white mb-6">hojoudata合同会社</div>
-              <p className="text-sm leading-relaxed text-zinc-400 max-w-sm mb-8">
+              <p className="text-base leading-relaxed text-zinc-400 max-w-sm mb-8">
                 農業現場の困りごとを、試せるかたちに変える実証フィールドです。
               </p>
-              <div className="space-y-3 text-sm text-zinc-500">
+              <div className="space-y-3 text-base text-zinc-500">
                 <p>代表者：越智聖人</p>
                 <p>所在地：東京都世田谷区池尻3-28-21</p>
                 <p>フィールド：埼玉県加須市</p>
@@ -648,10 +648,10 @@ export default function Page() {
             <div className="lg:justify-self-end">
               <div className="rounded-2xl border border-white/10 bg-zinc-900/50 p-8 max-w-sm">
                 <h3 className="text-sm font-bold text-white mb-4">Contact</h3>
-                <p className="text-sm text-zinc-400 mb-6">
+                <p className="text-base text-zinc-400 mb-6">
                   連携・実証・取材・事業に関するお問い合わせはこちらからお願いいたします。
                 </p>
-                <a href="mailto:info@hojoudata.jp" className="text-emerald-400 hover:text-emerald-300 font-medium text-sm flex items-center gap-2">
+                <a href="mailto:info@hojoudata.jp" className="text-emerald-400 hover:text-emerald-300 font-medium text-base flex items-center gap-2">
                   info@hojoudata.jp
                   <ChevronRight className="w-4 h-4" />
                 </a>
@@ -659,8 +659,8 @@ export default function Page() {
             </div>
           </div>
           <div className="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-xs text-zinc-600">© {new Date().getFullYear()} hojoudata LLC. All rights reserved.</p>
-            <div className="flex gap-4 text-xs text-zinc-600">
+            <p className="text-sm text-zinc-600">© {new Date().getFullYear()} hojoudata LLC. All rights reserved.</p>
+            <div className="flex gap-4 text-sm text-zinc-600">
               <Link href="/privacy" className="hover:text-zinc-400">プライバシーポリシー</Link>
               <Link href="/" className="hover:text-zinc-400">運営会社</Link>
             </div>

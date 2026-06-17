@@ -1,6 +1,14 @@
 import './globals.css';
 import type { Metadata } from 'next';
 import Script from 'next/script';
+import { Noto_Sans_JP } from 'next/font/google';
+
+const notoSansJP = Noto_Sans_JP({
+  subsets: ['latin'],
+  weight: ['400', '500', '700'],
+  display: 'swap',
+  variable: '--font-noto-sans-jp',
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.hojoudata.jp'),
@@ -42,7 +50,7 @@ export default function RootLayout({
           `}
         </Script>
       </head>
-      <body>{children}</body>
+      <body className={notoSansJP.className}>{children}</body>
     </html>
   );
 }
