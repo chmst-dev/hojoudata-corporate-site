@@ -3,8 +3,20 @@ import type { Metadata } from 'next';
 import Script from 'next/script';
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://www.hojoudata.jp'),
   title: 'hojoudata合同会社',
   description: '農業現場の困りごとを、試せるかたちに。圃場・水路・作業・人手・経営を見える化し、持続可能な地域農業の仕組みを現場で育てていきます。',
+  alternates: {
+    canonical: 'https://www.hojoudata.jp',
+  },
+  openGraph: {
+    type: 'website',
+    url: 'https://www.hojoudata.jp',
+    siteName: 'hojoudata合同会社',
+    title: 'hojoudata合同会社',
+    description: '農業現場の困りごとを、試せるかたちに。圃場・水路・作業・人手・経営を見える化し、持続可能な地域農業の仕組みを現場で育てていきます。',
+    locale: 'ja_JP',
+  },
 };
 
 export default function RootLayout({
