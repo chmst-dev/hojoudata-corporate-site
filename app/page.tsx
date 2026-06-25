@@ -4,7 +4,6 @@ import Link from 'next/link';
 import {
   MapPin,
   Layers,
-  Users,
   ArrowRight,
   Sprout,
   Building2,
@@ -19,6 +18,12 @@ import {
   FlaskConical,
   BarChart3,
   TreePine,
+  MessageCircle,
+  Lightbulb,
+  Wrench,
+  PlayCircle,
+  RefreshCw,
+  Mail,
 } from 'lucide-react';
 
 export default function Page() {
@@ -274,15 +279,14 @@ export default function Page() {
             <div className="mb-16">
               <h2 className="text-sm font-bold uppercase tracking-widest text-emerald-400 mb-3">Field Apps</h2>
               <p className="text-3xl font-bold tracking-tight text-white sm:text-4xl mb-6">
-                現場の仮説から生まれた実証アプリ
+                現場の仮説を、小さく試す事例
               </p>
               <div className="max-w-2xl space-y-3 text-base text-zinc-400 leading-relaxed">
                 <p>
-                  hojoudataでは、地域農業を続けるうえで現場が直面している課題を、小さなアプリとして形にし、実際の現場で検証しています。
+                  hojoudataでは、地域農業を続けるうえで現場が直面している課題を、小さなアプリや運用モデルとして形にし、実際の現場で検証しています。
                 </p>
                 <p>
-                  圃場や注意地点を共有する「みんなの圃場マップ」。農家同士の助け合いを支える「あぐり結び」。
-                  どちらも、現場の困りごとを起点に、地域で使える仕組みとして育てている実証プロダクトです。
+                  圃場や注意地点を共有する「みんなの圃場マップ」、農家同士の助け合いを支える「あぐり結び」に加え、農業者自身がアプリ開発に参加する「hanamii for Agri」など、現場の困りごとを起点に、地域で使える仕組みを育てています。
                 </p>
               </div>
             </div>
@@ -467,6 +471,149 @@ export default function Page() {
                   </div>
                 </div>
               </div>
+
+              {/* プロダクト3：hanamii for Agri */}
+              <div className="rounded-3xl border border-emerald-500/10 bg-gradient-to-br from-zinc-900/60 to-emerald-950/20 p-8 lg:p-12 relative overflow-hidden">
+                {/* 背景装飾 */}
+                <div className="absolute top-0 right-0 w-64 h-64 bg-emerald-500/5 blur-[80px] rounded-full pointer-events-none" />
+
+                {/* プログラムヘッダー */}
+                <div className="mb-10">
+                  <div className="flex flex-wrap items-center gap-3 mb-4">
+                    <span className="text-xs font-bold uppercase tracking-widest text-emerald-400">Program</span>
+                    <span className="inline-flex items-center gap-1.5 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-3 py-1 text-xs font-medium text-emerald-300">
+                      <span className="flex h-1.5 w-1.5 rounded-full bg-emerald-400" />
+                      農業者参加型プロトタイピング支援
+                    </span>
+                    <span className="inline-flex items-center rounded-full border border-zinc-700 bg-zinc-800/60 px-3 py-1 text-xs font-medium text-zinc-400">
+                      ワークショップ形式で実施
+                    </span>
+                    <span className="inline-flex items-center rounded-full border border-zinc-700 bg-zinc-800/60 px-3 py-1 text-xs font-medium text-zinc-400">
+                      生成AIを活用したアプリ試作支援
+                    </span>
+                  </div>
+                  <h3 className="text-2xl font-bold text-white lg:text-3xl mb-2">hanamii for Agri</h3>
+                  <p className="text-emerald-300 font-medium text-base mb-6">
+                    農業者自身が、現場課題をアプリにするための伴走型プログラム。
+                  </p>
+
+                  {/* 説明文 */}
+                  <div className="grid gap-8 lg:grid-cols-2 lg:items-start">
+                    <div className="space-y-4 text-zinc-400 leading-relaxed text-base">
+                      <p>
+                        農業現場の課題は、外部から見ただけでは分からないものが多くあります。
+                        水管理、作業記録、圃場共有、収穫管理、地域内の連絡、補助金や作業報告など、現場ごとに困りごとは異なります。
+                      </p>
+                      <p>
+                        hanamii for Agri は、農業者自身がそうした課題を言語化し、生成AIを活用したプロトタイピング環境「hanamii」を使って、試せるアプリの形にしていく伴走型プログラムです。
+                      </p>
+                      <p>
+                        hojoudataは、農業者との対話を通じて課題整理を行い、ワークショップや個別フォローを通じて、アプリの仮説づくり、プロトタイプ化、現場での検証、改善までを支援します。
+                      </p>
+                      <p>
+                        目的は、完成されたシステムを一方的に導入することではありません。
+                        農業者自身が「自分たちの現場で本当に使えるか」を確かめながら、続けられる仕組みを一緒に育てることです。
+                      </p>
+                    </div>
+
+                    {/* 画像 */}
+                    <div className="flex flex-col gap-3">
+                      <div className="relative rounded-2xl overflow-hidden border border-white/5 bg-zinc-950 shadow-xl">
+                        <Image
+                          src="/hanamii-for-agri.png"
+                          alt="hanamii for Agri：農業者が現場課題をアプリの形にする伴走型プロトタイピングプログラム"
+                          width={800}
+                          height={600}
+                          className="w-full h-auto"
+                        />
+                      </div>
+                      <p className="text-sm text-zinc-500 text-center px-1">
+                        農業者の課題整理から試作・検証・改善までを、hojoudataが伴走しながら支援します。
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* hojoudataの役割 */}
+                <div className="rounded-2xl border border-white/5 bg-zinc-900/40 p-6 mb-10">
+                  <div className="text-xs font-bold text-emerald-400 mb-3 uppercase tracking-widest">hojoudataの役割</div>
+                  <p className="text-base text-zinc-300 leading-relaxed">
+                    hanamii for Agri における hojoudata の役割は、単なる開発代行ではありません。
+                    農業現場の言葉と、アプリ開発・プロトタイピングの言葉をつなぎ、農業者が自分たちの課題を試せる形にするための伴走役です。
+                  </p>
+                  <p className="text-base text-zinc-300 leading-relaxed mt-3">
+                    hojoudataは、農業現場に近い立場から課題を整理し、hanamiiのプロトタイピング環境を活用しながら、地域農業に合ったアプリや運用モデルの実証を支援します。
+                  </p>
+                </div>
+
+                {/* 実施ステップ */}
+                <div className="mb-10">
+                  <p className="text-sm font-bold text-zinc-400 uppercase tracking-widest mb-6">実施の流れ</p>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3">
+                    {[
+                      {
+                        step: '01',
+                        label: '課題を聞く',
+                        icon: <MessageCircle className="w-5 h-5 text-emerald-400" />,
+                        text: '農業者・地域・行政と対話し、現場で困っていることを整理します。',
+                      },
+                      {
+                        step: '02',
+                        label: 'アイデアにする',
+                        icon: <Lightbulb className="w-5 h-5 text-emerald-400" />,
+                        text: '課題をもとに、どのようなアプリや仕組みがあれば助けになるかを考えます。',
+                      },
+                      {
+                        step: '03',
+                        label: 'その場で試作する',
+                        icon: <Wrench className="w-5 h-5 text-emerald-400" />,
+                        text: 'hanamiiを活用し、音声や簡易な入力を通じて、アプリのプロトタイプを作成します。',
+                      },
+                      {
+                        step: '04',
+                        label: '現場で使ってみる',
+                        icon: <PlayCircle className="w-5 h-5 text-emerald-400" />,
+                        text: '作成したプロトタイプを実際の作業の中で試し、使われるかを確認します。',
+                      },
+                      {
+                        step: '05',
+                        label: '改善する',
+                        icon: <RefreshCw className="w-5 h-5 text-emerald-400" />,
+                        text: '利用者の反応や現場での違和感をもとに、再度ワークショップや個別フォローを行い、改善につなげます。',
+                      },
+                    ].map((item, idx, arr) => (
+                      <div key={idx} className="relative">
+                        <div className="rounded-2xl border border-white/5 bg-zinc-900/50 p-5 h-full hover:bg-zinc-900/80 transition-colors">
+                          <div className="flex items-center gap-2 mb-3">
+                            <div className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-zinc-800/60 border border-white/5">
+                              {item.icon}
+                            </div>
+                            <span className="text-xs font-bold text-emerald-500 uppercase tracking-widest">{item.step}</span>
+                          </div>
+                          <h4 className="text-sm font-bold text-white mb-2">{item.label}</h4>
+                          <p className="text-sm text-zinc-400 leading-relaxed">{item.text}</p>
+                        </div>
+                        {idx < arr.length - 1 && (
+                          <div className="hidden lg:block absolute top-1/2 -right-2 -translate-y-1/2 text-zinc-700 z-10">
+                            <ChevronRight className="w-4 h-4" />
+                          </div>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* CTA */}
+                <div className="pt-2">
+                  <a
+                    href="mailto:info@hojoudata.jp"
+                    className="inline-flex items-center gap-2 rounded-full border border-emerald-500/40 bg-emerald-500/10 px-6 py-3 text-sm font-medium text-emerald-300 transition-all hover:bg-emerald-500/20 hover:text-emerald-200 hover:border-emerald-400/60"
+                  >
+                    農業者向けワークショップを相談する
+                    <Mail className="w-4 h-4" />
+                  </a>
+                </div>
+              </div>
             </div>
 
             {/* 締めコピー */}
@@ -475,7 +622,7 @@ export default function Page() {
                 <p className="text-lg font-bold text-white leading-relaxed">
                   圃場を共有する。<br />
                   作業を助け合う。<br />
-                  経営として試す。<br />
+                  課題をアプリにする。<br />
                   <span className="text-emerald-400">現場の情報を、地域の資産に変えていく。</span>
                 </p>
               </div>
